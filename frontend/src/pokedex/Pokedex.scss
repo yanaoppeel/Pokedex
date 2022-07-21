@@ -1,0 +1,29 @@
+.pokedex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    .pokemons-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .previous {
+            margin-left: 10px;
+        }
+
+        .next {
+            margin-right: 10px;
+        }
+
+        .previous,
+        .next {
+            font-size: 40px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
