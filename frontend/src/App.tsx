@@ -1,7 +1,8 @@
 import './App.css';
-import Pokedex from './pokedex/Pokedex';
+import Pokedex from 'components/pokedex/Pokedex';
+import React from 'react';
 
-function App() {
+const App = () => {
   return (
     <div id="root">
       <Pokedex />
