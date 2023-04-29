@@ -51,7 +51,7 @@ const Pokedex = () => {
             {!loading
                 ?
                 (<div className='pokemons-list'>
-                    <button className='previous' onClick={() => handlePageClick('previous')}>{previousIcon}</button>
+                    <button className='previous' onClick={() => handlePageClick('previous')} disabled={offset === 0}>{previousIcon}</button>
                     <Pokemons pokemons={pokemons} />
                     <button className='next' onClick={() => handlePageClick('next')}>{nextIcon}</button>
                 </div>)
@@ -63,7 +63,7 @@ const Pokedex = () => {
                 />
             }
         </div>
-    ), [pokemons, loading, handlePageClick]);
+    ), [offset, pokemons, loading, handlePageClick]);
 }
 
 export default Pokedex;
