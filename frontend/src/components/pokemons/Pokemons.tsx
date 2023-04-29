@@ -1,5 +1,6 @@
 import React from 'react';
 import './Pokemons.scss';
+import { buildImgSrc } from './PokemonService';
 
 export interface IPokemon {
     name: string;
@@ -17,14 +18,9 @@ const Pokemons = ({ pokemons }: PokemonsProps) => {
         }
     
         return pokemons.map(pokemon => {
-            const splitUrl = pokemon.url.split('/')
-            const id = splitUrl[splitUrl.length - 2];
-            // Build image url
-            const imgSrc = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
-            
             return (
                 <div className='pokemon-box'>
-                    <img src={imgSrc} alt=""></img>
+                    <img src={buildImgSrc(pokemon)} alt=""></img>
                     <p>{pokemon.name}</p>
                 </div>
             );

@@ -12,7 +12,6 @@ export class Pokemon implements IPokemon {
         this.url = url;
     }
 }
-
 export interface IPokemonPage {
     count: number;
     next: string;

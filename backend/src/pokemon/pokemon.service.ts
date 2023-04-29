@@ -4,7 +4,7 @@ import { IPokemonPage, PokemonPage } from './pokemon.model';
 
 @Injectable()
 export class PokemonService {
-    private readonly POKE_API_URL = 'https://pokeapi.co/api/v2/';
+    private readonly POKE_API_URL = process.env.POKE_API_URL;
 
     private readonly logger = new Logger(PokemonService.name);
 
